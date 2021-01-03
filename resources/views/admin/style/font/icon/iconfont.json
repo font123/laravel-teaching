@@ -1,0 +1,37 @@
+{
+  "id": "2122346",
+  "name": "icon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12590345",
+      "name": "老师",
+      "font_class": "laoshi",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "12590346",
+      "name": "老师2",
+      "font_class": "laoshi1",
+      "unicode": "e6a5",
+      "unicode_decimal": 59045
+    },
+    {
+      "icon_id": "14599143",
+      "name": "男性-管理员",
+      "font_class": "nanxing-guanliyuan",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "3904398",
+      "name": "学生",
+      "font_class": "xuesheng",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    }
+  ]
+}

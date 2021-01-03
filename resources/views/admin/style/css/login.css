@@ -1,0 +1,96 @@
+html,body{
+  width:100%;
+  height:100%;
+}
+body {
+  font-family:"Lucida Sans", Verdana, sans-serif; 
+  background: url(../img/bgimage.jpg); 
+  background-repeat: no-repeat;
+  background-size: 50%;
+  -webkit-background-size: 100% 100%;
+  background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+}
+
+.main img {
+    width:100%;
+}
+
+h1{
+    font-size:1.625em;
+	margin-top: 2%;
+	margin-left: 1%;
+	/* color: #7FA4B5; */
+	color:#ffffff;
+}
+
+h2{
+    font-size:1.3em;
+}
+
+.header {
+    padding:1%;
+	margin-top: 10%;
+	
+}
+
+.gridcontainer {
+	width:100%;
+	/* background-color:#000;
+	filter:Alpha(Opacity=70);
+	opacity:0.7;
+	height: 100%; */
+}
+
+.gridwrapper {
+	overflow:hidden;
+}
+
+ .card{
+	/* background:#EFF1F0; */
+	border-radius: 1.25rem;
+ 	margin-top:20px;
+	
+	
+}
+#inputUsername{
+	padding-left: 2.5rem; 
+}
+.user{
+	position: absolute;
+	top:5px;
+	left:22px;
+}
+.pw{
+	position: absolute;
+	top:5px;
+	left:22px;
+}
+.code{
+	position: absolute;
+	top:5px;
+	left:22px;
+}
+#inputPassword{
+	/* background: #FFFFFF url(../img/pw.png) no-repeat; */
+	padding-left: 2.5rem;
+}
+#inputCode{
+	/* background: #FFFFFF url(../img/code.png) no-repeat; */
+	padding-left: 2.5rem;
+}
+.btn{
+	background: #0069d9;
+	color:#ffffff;
+}
+.login{
+	padding-top:10px;
+}
+select{
+	border: solid 1.5px #dcddde;
+	border-radius: 6px;
+	width:100px;
+	height:30px;
+	
+} 
+

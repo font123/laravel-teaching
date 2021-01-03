@@ -1,0 +1,24 @@
+<html>
+<style>
+.header{
+	height:100px;
+	background:red;
+}
+.middle{
+	height:300px;
+	background:blue;
+}
+.footer{
+	height:100px;
+	background:green;
+}
+</style>
+<body>
+@include('header',['title'=>'首页'])
+@section('content')
+<p>就会加快</p>
+@show
+@include('footer')
+</body>
+</html>
+

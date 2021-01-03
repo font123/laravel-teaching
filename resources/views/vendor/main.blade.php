@@ -1,0 +1,21 @@
+<html>
+<style>
+.header{
+	height:100px;
+	background:red;
+}
+.middle{
+	height:300px;
+	background:blue;
+}
+.footer{
+	height:100px;
+	background:green;
+}
+</style>
+<body>
+@include('header',['title'=>'首页'])
+<div class="middle">中间部分</div>
+@include('footer')
+</body>
+</html>
