@@ -206,8 +206,8 @@ body{
           <a href="#" style="color: #000000;"> <i class="fa fa-circle text-success" ></i> 在线</a> </div>
       </div>
       <ul id="dc_accordion" class="sidebar-menu tree">
-        <li> <a href="index.html" class=" active"> <i class="ti-home"></i> <span>首页</span></a> </li>
-        <li class="menu_sub"> <a href="#"> <i class="ti-blackboard"></i> <span>评教</span> <span class="ti ti-angle-down styleicon"></span></a>
+        <li> <a href="{{url('admin/sclass')}}" class=" active"> <img src="{{asset('resources/views/admin/style/img/csy.png')}}" style="padding-right:5px"> <span>首页</span></a> </li>
+        <li class="menu_sub"> <a href="#"> <img src="{{asset('resources/views/admin/style/img/cpost.png')}}" style="padding-right:5px"> <span>评教</span> <span class="ti ti-angle-down styleicon"></span></a>
           <ul class="down_menu">
             <li><a href="{{url('admin/sevaluate')}}">选择评教</a></li>
             <li><a href="{{url('admin/shistory')}}">评教历史</a></li>

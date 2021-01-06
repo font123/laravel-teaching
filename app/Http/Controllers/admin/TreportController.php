@@ -74,8 +74,9 @@ class TreportController extends Controller
               
               //不同学期的数据
               $diff = Desc::where('teacher_id',session('user.teacher_id'))->get();
+              
               foreach ($diff as $k=>$val){
-                  if (count($val)>3){
+                  if (count($diff)>3){
                   if($k==0){
                       $data_4 = Sevaluate::where('teacher_id',session('user.teacher_id'))->where('course_name',$input['coursename'])->where('term',$val->term)->get();//匹配学生评教数据
                       $tdata_4 = Tevaluate::where('teacher_id',session('user.teacher_id'))->where('course_name',$input['coursename'])->where('term',$val->term)->get();//匹配同行评教数据
@@ -194,7 +195,7 @@ class TreportController extends Controller
                           $majorMean_1 = sprintf("%1\$.2f", $majorTotal/count($majorData)); //专业平均分
                       }
                 
-              } elseif (count($val)<2){
+                  } elseif (count($diff)<2){
                   if($k==0){
                       $data_4 = Sevaluate::where('teacher_id',session('user.teacher_id'))->where('course_name',$input['coursename'])->where('term',$val->term)->get();//匹配学生评教数据
                       $tdata_4 = Tevaluate::where('teacher_id',session('user.teacher_id'))->where('course_name',$input['coursename'])->where('term',$val->term)->get();//匹配同行评教数据
@@ -276,7 +277,7 @@ class TreportController extends Controller
                       }
                   }
                   
-              } elseif (1<count($val) && count($val)<3){
+                  } elseif (1<count($diff) && count($diff)<3){
                   if($k==0){
                       $data_4 = Sevaluate::where('teacher_id',session('user.teacher_id'))->where('course_name',$input['coursename'])->where('term',$val->term)->get();//匹配学生评教数据
                       $tdata_4 = Tevaluate::where('teacher_id',session('user.teacher_id'))->where('course_name',$input['coursename'])->where('term',$val->term)->get();//匹配同行评教数据
@@ -337,7 +338,7 @@ class TreportController extends Controller
                   }
                   $lastScore_2 = 0;$colMean_2 = 0;$majorMean_2 = 0;
                   $lastScore_1 = 0;$colMean_1 = 0;$majorMean_1 = 0;
-              }elseif (2<count($val) && count($val)<4){
+                  }elseif (2<count($diff) && count($diff)<4){
                   if($k==0){
                       $data_4 = Sevaluate::where('teacher_id',session('user.teacher_id'))->where('course_name',$input['coursename'])->where('term',$val->term)->get();//匹配学生评教数据
                       $tdata_4 = Tevaluate::where('teacher_id',session('user.teacher_id'))->where('course_name',$input['coursename'])->where('term',$val->term)->get();//匹配同行评教数据
@@ -427,7 +428,9 @@ class TreportController extends Controller
                   }
                   $lastScore_1 = 0;$colMean_1 = 0;$majorMean_1 = 0;
               }
+              
             }
+           
             return view('admin.teacher.result',compact('course_name','sTotal','mean','Tmean','Dmean','lastScore','context','desc','majordesc','studentsum','process',
                 'lastScore_1','colMean_1','majorMean_1','lastScore_2','colMean_2','majorMean_2','lastScore_3','colMean_3','majorMean_3','lastScore_4','colMean_4','majorMean_4'));
           }else {

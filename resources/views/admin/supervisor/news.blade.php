@@ -187,20 +187,20 @@
       <div class="user-panel">
         <div class="user_image"> <img src="{{asset($img)}}" class="img-circle mCS_img_loaded" alt=""> </div>
         <div class="info">
-          <p style="color: #000000;">{{session('user.dudao_name')}}(老师)</p>
+          <p style="color: #000000;">{{session('user.dudao_name')}}(督导)</p>
           <a href="#" style="color: #000000;"> <i class="fa fa-circle text-success" ></i> 在线</a> </div>
       </div>
       <ul id="dc_accordion" class="sidebar-menu tree">
-        <li> <a href="index.html" class=" active"> <i class="ti-home"></i> <span>首页</span></a> </li>
-        <li class="menu_sub"> <a href="#"> <i class="ti-blackboard"></i> <span>听课计划</span> <span class="ti ti-angle-down styleicon"></span></a>
+        <li> <a href="{{url('admin/dindex')}}" class=" active"><img src="{{asset('resources/views/admin/style/img/csy.png')}}" style="padding-right:5px"><span>首页</span></a> </li>
+        <li class="menu_sub"> <a href="#"> <img src="{{asset('resources/views/admin/style/img/cpost.png')}}" style="padding-right:3px"> <span>听课计划</span> <span class="badge badge-pill badge-danger float-right">New</span> </a>
           <ul class="down_menu">
-            <li><a href="{{url('admin/yplan')}}">已完成</a></li>
-            <li><a href="{{url('admin/nplan')}}">未完成</a></li>
+            <li><a href="{{url('admin/dno')}}">已完成</a></li>
+            <li><a href="{{url('admin/dyes')}}">未完成</a></li>
           </ul>
         </li>
-      
-       <li> <a href="{{url('admin/dhistory')}}"> <i class="icon-user"></i>评教历史<span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
-      </ul>
+              
+        <li> <a href="{{url('admin/dyes')}}"><img src="{{asset('resources/views/admin/style/img/chistory.png')}}" style="padding-right:5px">评教历史<span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
+ </ul>
     </div>
     <div class="content_wrapper bg_homebefore">
       <div class="container-fluid">
@@ -250,13 +250,13 @@
                          
                        </tr>
                        <tr>
-                         <th>刘李凤同学搞事</th>
+                         <th>社团活动</th>
                          <td>2020.11.13 周二2:12</td>
                          <td>图书馆</td>
                           <td>1</td>
                        </tr>
                        <tr>
-                         <th>刘李凤同学拾金不昧</th>
+                         <th>比赛</th>
                          <td>2020.11.13 周二2:12</td>
                          <td>图书馆</td>
                           <td ><img src="{{asset('resources/views/admin/style/img/girl_1.png')}}"  style="width:40px "></td>

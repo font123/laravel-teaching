@@ -4,20 +4,18 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>评教系统新闻页</title>
 <link rel="stylesheet" href="{{asset('resources/views/admin/style/css/plugins.css')}}">
 <link rel="stylesheet" href="{{asset('resources/views/admin/style/css/style4.css')}}">
-
-<title>评教系统首页</title>
-
 <style type="text/css">
-body{
-   margin: 0;
-   padding-bottom: 70px;
-   
-    
-   text-decoration:none;
- }
+	body{
+			margin: 0;
+			padding-bottom: 50px;
+			
+				
+			text-decoration:none;
+	}
 	.user-panel{
 			width:100%; 
 			height:; 
@@ -103,17 +101,7 @@ body{
 	  display: block;
 	  color: #32b4e5;
 	}
-table{
-                border: 1px solid #ccc;
-                border-collapse: collapse;
-                text-align: center;
-        	    
-            }
-            tr,th,td{
-                width: 80px;
-                height: 100px;
-                border: 1px solid #ccc;
-            }
+	
 	
 </style>
 </head>
@@ -129,7 +117,7 @@ table{
         <div class="row">
           <div class="col-md-12 d-flex justify-content-between align-items-center">
             <div class="menu-icon"> <a href="javascript:void(0)" class="menu-toggler sidebar-toggler"></a> </div>
-            <div class="logo d-flex align-items-center justify-content-center"> <a href="javascript:void(0)"> <h4 style="margin-top: 10px;margin-left:45px;">评教首页</h4><strong class="logo_icon">  </strong> <span class="logo-default"></span> </a> </div>
+            <div class="logo d-flex align-items-center justify-content-center"> <a href="javascript:void(0)"> <h4 style="margin-top: 10px;margin-left: 45px;">轻院新闻</h4><strong class="logo_icon">  </strong> <span class="logo-default"> </span> </a> </div>
             <div class="right_detail">
               <div class="row d-flex align-items-center justify-content-end">
                 <div class="col-xl-12 col-12 d-flex justify-content-end">
@@ -171,10 +159,11 @@ table{
                           <div class="user-panel">
                             <div class="user_image"> <img src="{{asset($img)}}" class="img-circle mCS_img_loaded" alt=""> </div>
                             <div class="info">
-                              <p style="color: #000000;"> {{session('user.teacher_name')}}（老师）</p>
+                              <p style="color: #000000;">{{session('user.teacher_name')}}（老师）</p>
                               <a href="#"  style="color: #000000;"> 教工号：{{session('user.teacher_id')}}</a> </div>
                           </div>
                         </li>
+                        <li> <a href="#"> <i class="icon-user"></i>简介 </a> </li>
                         <li> <a href="#"> <i class="icon-settings"></i> 设置 </a> </li>
                         <li> <a href="#"> <i class="icon-directions"></i> 帮助 </a> </li>
                         <li class="divider"></li>
@@ -202,112 +191,190 @@ table{
           <a href="#" style="color: #000000;"> <i class="fa fa-circle text-success" ></i> 在线</a> </div>
       </div>
       <ul id="dc_accordion" class="sidebar-menu tree">
-        <li> <a href="{{url('admin/tclass')}}" class=" active"><img src="{{asset('resources/views/admin/style/img/csy.png')}}" style="padding-right:5px"><span>首页</span></a> </li>
-        <li class="menu_sub"> <a href="#"> <img src="{{asset('resources/views/admin/style/img/clisten.png')}}"> <span>听课计划</span> <span class="badge badge-pill badge-danger float-right">New</span> </a>
+        <li> <a href="index.html" class=" active"> <i class="ti-home"></i> <span>首页</span></a> </li>
+        <li class="menu_sub"> <a href="#"> <i class="ti-blackboard"></i> <span>听课计划</span> <span class="ti ti-angle-down styleicon"></span></a>
           <ul class="down_menu">
             <li><a href="{{url('admin/yplan')}}">已完成</a></li>
             <li><a href="{{url('admin/nplan')}}">未完成</a></li>
           </ul>
         </li>
-              
-         <li> <a href="{{url('admin/tsee')}}"> <img src="{{asset('resources/views/admin/style/img/cpost.png')}}" style="padding-right:5px">评教报告 <span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
-        <li> <a href="{{url('admin/yplan')}}">  <img src="{{asset('resources/views/admin/style/img/chistory.png')}}" style="padding-right:5px">评教历史<span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
-             
+      
+       <li> <a href="{{url('admin/tsee')}}"> <i class="icon-user"></i>评教报告 <span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
+      	 <li> <a href="{{url('admin/yplan)}}"> <i class="icon-user"></i>评教历史<span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
       </ul>
     </div>
-    <div class="content_wrapper bg_homebefore">
+        <div class="content_wrapper bg_homebefore">
       <div class="container-fluid">
-        <div class="sec-title">
-          <div class="row d-flex align-items-center">
-            <div class="col-md-12">
-              <div class="heading_home" style="background-image: url(./img/url(img/bg_1.png);">
-                <h3 style="color: #0069D9;">欢迎来到评教系统</h3>
-                <p> 广轻工职业技术学院欢迎您 </p>
-              </div>
-            </div>
-          </div>
-        </div>
- <div class="content-bar"> 
+		
+		<div class="breadcrumbbar">
+		  <!-- Start row -->
+		  <div class="row">
+			  
+		    <div class="col-md-5 col-lg-5">
+				
+		      <h4 class="page-title"><span><img src="{{asset('resources/views/admin/style/img/xinwen%20(1).png')}}" ></span>Hi,欢迎来看轻院新闻</h4>
+		      <div class="breadcrumb-list">
+
+		      </div>
+		    </div>
+		    <div class="col-md-4 col-lg-4 mr-0">
+		      <div class="widgetbar">
+		        <button class="btn btn-primary" style="width: 100%;"><i class="ri-refresh-line mr-2"></i>刷新</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+        <div class="content-bar"> 
          
+         <div class="row">
+           <div class="col-12">
+             <div class="card">
+               <div class="table-rep-plugin">
+                 <div class="table-responsive" data-pattern="priority-columns">
+                   <table id="tech-companies-1" class="table  table-striped">
+                     <thead>
+                       <tr>
+                         <th>新闻标题</th>
+                         <th data-priority="5">新闻时间</th>
+                         <th data-priority="3">新闻地点</th>
+						 <th data-priority="3">新闻简图</th>
+   
+                        
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <th>大功率通报</th>
+                         <td>2020.11.13 周二2:12</td>
+                         <td>宿舍区域</td>
+                          <td>1</td>
+                         
+                       </tr>
+                       <tr>
+                         <th>社团活动</th>
+                         <td>2020.11.13 周二2:12</td>
+                         <td>图书馆</td>
+                          <td>1</td>
+                       </tr>
+                       <tr>
+                         <th>比赛</th>
+                         <td>2020.11.13 周二2:12</td>
+                         <td>图书馆</td>
+                          <td ><img src="{{asset('resources/views/admin/style/img/girl_1.png')}}"  style="width:40px "></td>
+                       </tr>
+                       <tr>
+                        
+                       </tr>
+                       <tr>
+                         
+                       </tr>
+                       <tr>
+                        
+                       </tr>
+                       <tr>
+                         
+                       </tr>
+                       <!-- Repeat -->
+                       <tr>
+                         
+                       </tr>
+                       <tr>
+                        
+                       </tr>
+                       <tr>
+                         
+                       </tr>
+                       <tr>
+                        
+                       </tr>
+                       <tr>
+                         
+                       </tr>
+                       <tr>
+                         
+                       </tr>
+                       <tr>
+                        
+                       </tr>
+                       <!-- Repeat -->
+                       <tr>
+                        
+                       </tr>
+                       <tr>
+                         
+                       </tr>
+                       <tr>
+                        
+                       </tr>
+                       <tr>
+                        
+                       </tr>
+                       <tr>
+                         
+                       </tr>
+                       <tr>
+                         
+                       </tr>
+                       <tr>
+                         
+                       </tr>
+                       <!-- Repeat -->
+                       <tr>
+                         
+                       </tr>
+                       
+                     </tbody>
+                   </table>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
           <div class="row"> 
-           
-          </div>
-          
-          <div class="row"> 
-       
-            <div class="col-lg-12 col-xl-3">
-              <div class="card m-b-30">
-                <div class="card-header text-center">
-                  <h5 class="card-title mb-0">日程</h5>
-                </div>
-                <div class="card-body text-center">
-                  <div id="apex-stroked-circle-guage-chart"></div>
-                   
-                </div>
-                <div class="card-footer text-center">
-                  <div class="row">      
-                    <div class="col-4 border-right px-0">
-                      <p class="my-2">年</p>
-                      <h5 id="year"></h5>
-                    </div>
-                    <div class="col-4 px-0">
-                      <p class="my-2">月</p>
-                      <h5 id="month"></h5>
-                    </div>
-                    <div class="col-4 border-right px-0">
-                      <p class="my-2">星期</p>
-                      <h5 id="day"></h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <!-- End col --> 
           </div>
-          <!-- End row --> 
-          <!-- Start row -->
-
-          <!-- End row -->
+    
           
         </div>
+        <!-- End Rightbar --> 
       </div>
     </div>
   </div>
 </div>
 <footer class="am-menu am-cf" >
-        	 <ul class="list-inline text-center" id="list">
-            <div class="am-menu-column index" id="index">
-              <li class="active">
-        		<a href="">
-                <span><img src="{{asset('resources/views/admin/style/img/frist2.png')}}" width="30px"></span>
-              </a>
-        	  </li>
-            </div>
-            <div class="am-menu-column explore" id="explore">
-        		 <li>
-              <a href="{{url('admin/tlisten')}}">
-                <span><img src="{{asset('resources/views/admin/style/img/add1.png')}}" width="30px"></span>
-              </a>
-        	  </li>
-            </div>
-        	
-            <div class="am-menu-column life" id="life">
-        		 <li>
-              <a href="{{url('admin/tnews')}}">
-                <span><img src="{{asset('resources/views/admin/style/img/new2.png')}}" width="30px"></span>
-              </a>
-        	   </li>
-            </div>
-            <div class="am-menu-column my" id="my">
-        		 <li>
-              <a href="{{url('admin/tperson')}}">
-                <span><img src="{{asset('resources/views/admin/style/img/user1.png')}}" width="30px"></span>
-              </a>
-        	   </li>
-            </div>
-        	</ul>
-        </footer>
-</div>
+	 <ul class="list-inline text-center" id="list">
+    <div class="am-menu-column index" id="index">
+      <li class="active">
+		<a href="{{url('admin/tclass')}}">
+        <span><img src="{{asset('resources/views/admin/style/img/frist1.png')}}" width="30px"></span>
+      </a>
+	  </li>
+    </div>
+    <div class="am-menu-column explore" id="explore">
+		 <li>
+      <a href="{{url('admin/tlisten')}}">
+        <span><img src="{{asset('resources/views/admin/style/img/add1.png')}}" width="30px"></span>
+      </a>
+	  </li>
+    </div>
+	
+    <div class="am-menu-column life" id="life">
+		 <li>
+      <a href="#">
+        <span><img src="{{asset('resources/views/admin/style/img/new1.png')}}" width="30px"></span>
+      </a>
+	   </li>
+    </div>
+    <div class="am-menu-column my" id="my">
+		 <li>
+      <a href="{{url('admin/tperson')}}">
+        <span><img src="{{asset('resources/views/admin/style/img/user1.png')}}" width="30px"></span>
+      </a>
+	   </li>
+    </div>
+	</ul>
+</footer>
+
 <!--jquery js --> 
 <script src="{{asset('resources/views/admin/style/js/jquery-min.js')}}"></script> 
 <script src="{{asset('resources/views/admin/style/js/popper.min.js')}}"></script> 
@@ -324,11 +391,9 @@ table{
 <!--Charts js --> 
 <script src="{{asset('resources/views/admin/style/js/apexcharts.min.js')}}"></script> 
 <!--Custom Dashboard js --> 
-<script src="{{asset('resources/views/admin/style/js/custom-dashboard.js')}}"></script> 
+<!-- <script src="{{asset('resources/views/admin/style/js/custom-dashboard.js')}}"></script>  -->
 <!--jquery js --> 
-<script src="{{asset('resources/views/admin/style/js/custom.js')}}"></script>
-
-
+<script src="{{asset('resources/views/admin/style/js/custom.js')}}"></script> 
 
 </body>
 </html>

@@ -194,18 +194,17 @@
           <a href="#" style="color: #000000;"> <i class="fa fa-circle text-success" ></i> 在线</a> </div>
       </div>
       <ul id="dc_accordion" class="sidebar-menu tree">
-        <li> <a href="index.html" class=" active"> <i class="ti-home"></i> <span>首页</span></a> </li>
-        <li class="menu_sub"> <a href="#"> <i class="ti-blackboard"></i> <span>听课计划</span> <span class="ti ti-angle-down styleicon"></span></a>
+          <li> <a href="{{url('admin/tclass')}}" class=" active"><img src="{{asset('resources/views/admin/style/img/csy.png')}}" style="padding-right:5px"><span>首页</span></a> </li>
+        <li class="menu_sub"> <a href="#"> <img src="{{asset('resources/views/admin/style/img/clisten.png')}}"> <span>听课计划</span> <span class="badge badge-pill badge-danger float-right">New</span> </a>
           <ul class="down_menu">
             <li><a href="{{url('admin/yplan')}}">已完成</a></li>
             <li><a href="{{url('admin/nplan')}}">未完成</a></li>
-			
           </ul>
         </li>
-      
-        <li> <a href="{{url('admin/tsee')}}"> <i class="icon-user"></i>评教报告 <span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
-      	 <li> <a href="{{url('admin/yplan')}}"> <i class="icon-user"></i>评教历史<span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
-      </ul>
+              
+         <li> <a href="{{url('admin/tsee')}}"> <img src="{{asset('resources/views/admin/style/img/cpost.png')}}" style="padding-right:5px">评教报告 <span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
+        <li> <a href="{{url('admin/yplan')}}">  <img src="{{asset('resources/views/admin/style/img/chistory.png')}}" style="padding-right:5px">评教历史<span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
+               </ul>
     </div>
     <div class="content_wrapper bg_homebefore">
       <div class="container-fluid">

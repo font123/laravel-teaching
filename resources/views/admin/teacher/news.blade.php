@@ -124,7 +124,7 @@
                   <div class="right_bar_top d-flex align-items-center"> 
                     
                     <!-- notification_Start -->
-                     <div class="dropdown dropdown-notification"> 
+                    <div class="dropdown dropdown-notification"> 
                     @if($suminfo)
 					<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false"> <i class="fa fa-bell"></i> <span class="badge_coun">{{$suminfo}}</span> </a>
 					
@@ -159,7 +159,7 @@
                           <div class="user-panel">
                             <div class="user_image"> <img src="{{asset($img)}}" class="img-circle mCS_img_loaded" alt=""> </div>
                             <div class="info">
-                              <p style="color: #000000;">{{session('user.teacher_name')}}（老师）</p>
+                              <p style="color: #000000;">{{session('user.teacher_name')}}(教师)</p>
                               <a href="#"  style="color: #000000;"> 教工号：{{session('user.teacher_id')}}</a> </div>
                           </div>
                         </li>
@@ -187,21 +187,21 @@
       <div class="user-panel">
         <div class="user_image"> <img src="{{asset($img)}}" class="img-circle mCS_img_loaded" alt=""> </div>
         <div class="info">
-          <p style="color: #000000;">{{session('user.teacher_name')}}（老师）</p>
+          <p style="color: #000000;">{{session('user.teacher_name')}}(教师)</p>
           <a href="#" style="color: #000000;"> <i class="fa fa-circle text-success" ></i> 在线</a> </div>
       </div>
       <ul id="dc_accordion" class="sidebar-menu tree">
-        <li> <a href="index.html" class=" active"> <i class="ti-home"></i> <span>首页</span></a> </li>
-        <li class="menu_sub"> <a href="#"> <i class="ti-blackboard"></i> <span>听课计划</span> <span class="ti ti-angle-down styleicon"></span></a>
+          <li> <a href="{{url('admin/tclass')}}" class=" active"><img src="{{asset('resources/views/admin/style/img/csy.png')}}" style="padding-right:5px"><span>首页</span></a> </li>
+        <li class="menu_sub"> <a href="#"> <img src="{{asset('resources/views/admin/style/img/clisten.png')}}"> <span>听课计划</span> <span class="badge badge-pill badge-danger float-right">New</span> </a>
           <ul class="down_menu">
             <li><a href="{{url('admin/yplan')}}">已完成</a></li>
             <li><a href="{{url('admin/nplan')}}">未完成</a></li>
           </ul>
         </li>
-      
-       <li> <a href="{{url('admin/tsee')}}"> <i class="icon-user"></i>评教报告 <span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
-      	 <li> <a href="{{url('admin/yplan)}}"> <i class="icon-user"></i>评教历史<span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
-      </ul>
+              
+         <li> <a href="{{url('admin/tsee')}}"> <img src="{{asset('resources/views/admin/style/img/cpost.png')}}" style="padding-right:5px">评教报告 <span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
+        <li> <a href="{{url('admin/yplan')}}">  <img src="{{asset('resources/views/admin/style/img/chistory.png')}}" style="padding-right:5px">评教历史<span class="ion ion-ios-arrow-forward styleicon"></span></a> </li>
+             </ul>
     </div>
     <div class="content_wrapper bg_homebefore">
       <div class="container-fluid">
@@ -251,13 +251,13 @@
                          
                        </tr>
                        <tr>
-                         <th>刘李凤同学搞事</th>
+                         <th>社团活动</th>
                          <td>2020.11.13 周二2:12</td>
                          <td>图书馆</td>
                           <td>1</td>
                        </tr>
                        <tr>
-                         <th>刘李凤同学拾金不昧</th>
+                         <th>比赛</th>
                          <td>2020.11.13 周二2:12</td>
                          <td>图书馆</td>
                           <td ><img src="{{asset('resources/views/admin/style/img/girl_1.png')}}"  style="width:40px "></td>
@@ -345,7 +345,7 @@
 	 <ul class="list-inline text-center" id="list">
     <div class="am-menu-column index" id="index">
       <li class="active">
-		<a href="{{url('admin/tclass')}}">
+		<a href="{{url('admin/tindex')}}">
         <span><img src="{{asset('resources/views/admin/style/img/frist1.png')}}" width="30px"></span>
       </a>
 	  </li>
